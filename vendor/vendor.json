@@ -3,6 +3,30 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "C0AsOR8tLzWrfwWynYx3XsTLFss=",
+			"path": "github.com/0xAX/notificator",
+			"revision": "88d57ee9043ba88d6a62e437fa15dda1ca0d2b59",
+			"revisionTime": "2017-10-22T18:20:52Z"
+		},
+		{
+			"checksumSHA1": "rf4401a4BPVpHkdJ1Dfzx3onamo=",
+			"path": "github.com/codegangsta/envy/lib",
+			"revision": "4b78388c8ce4fa412440ca4eaa654e2fdd752e49",
+			"revisionTime": "2014-12-16T19:22:14Z"
+		},
+		{
+			"checksumSHA1": "X6rQq6vJpHhRHAGPTKqSMcTH46U=",
+			"path": "github.com/codegangsta/gin",
+			"revision": "cafe2ce98974a3dcca6b92ce393a91a0b58b8133",
+			"revisionTime": "2017-10-26T14:30:24Z"
+		},
+		{
+			"checksumSHA1": "VrLJmDW9jO+LNuakRWABzG8vxUQ=",
+			"path": "github.com/codegangsta/gin/lib",
+			"revision": "cafe2ce98974a3dcca6b92ce393a91a0b58b8133",
+			"revisionTime": "2017-10-26T14:30:24Z"
+		},
+		{
 			"checksumSHA1": "QeKwBtN2df+j+4stw3bQJ6yO4EY=",
 			"path": "github.com/gin-contrib/sse",
 			"revision": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae",
@@ -45,6 +69,12 @@
 			"revisionTime": "2017-11-07T05:05:31Z"
 		},
 		{
+			"checksumSHA1": "jWJJlpvg/cqbClaKqZoAnNP6HFc=",
+			"path": "github.com/mattn/go-shellwords",
+			"revision": "f8471b0a71ded0ab910825ee2cf230f25de000f1",
+			"revisionTime": "2018-06-05T04:17:37Z"
+		},
+		{
 			"checksumSHA1": "dAiPFGEqTBO9ovat1DkSheJ6/KQ=",
 			"path": "github.com/ugorji/go/codec",
 			"revision": "2e1067cd04ec91c6fdf491ac8028c9d3aea73ab4",
@@ -61,6 +91,12 @@
 			"path": "gopkg.in/go-playground/validator.v8",
 			"revision": "5f1438d3fca68893a817e4a66806cea46a9e4ebf",
 			"revisionTime": "2017-07-30T05:02:35Z"
+		},
+		{
+			"checksumSHA1": "Yx1MU40fyGe7hhqW9+dkv8kXa60=",
+			"path": "gopkg.in/urfave/cli.v1",
+			"revision": "cfb38830724cc34fedffe9a2a29fb54fa9169cd1",
+			"revisionTime": "2017-08-11T01:42:03Z"
 		},
 		{
 			"checksumSHA1": "ZSWoOPUNRr5+3dhkLK3C4cZAQPk=",
