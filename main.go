@@ -5,6 +5,7 @@ import (
 	"os"
 	"io"
 	"phoenix/route"
+	"net/http"
 )
 
 func main() {
@@ -12,6 +13,13 @@ func main() {
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 
 	server := gin.Default()
+
+	server.Static("/assets", "./public/assets")
+	server.LoadHTMLGlob("views/*")
+
+	server.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.html", nil)
+	})
 
 	router := route.NewRouter(server)
 	router.Routes()
