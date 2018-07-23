@@ -1,3 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
-gin -a 8080 -p 8000 run main.go
+SERVER_PORT=8080
+WATCH_SERVER_PORT=8000
+
+open http://localhost:$WATCH_SERVER_PORT
+gin -a $SERVER_PORT -p $WATCH_SERVER_PORT run main.go
