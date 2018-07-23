@@ -1,12 +1,12 @@
 # Phoenix Framework
 
-##Installation
+## Installation
 
 ```sh
 $ ./init.sh
 ```
 
-##Run server
+## Run server
 
 ```sh
 $ ./start.sh
