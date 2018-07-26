@@ -1,18 +1,21 @@
 package main
 
 import (
+	app2 "nimbus/core/app"
 	"github.com/gin-gonic/gin"
-	"os"
-	"io"
-	"phoenix/route"
 	"net/http"
+	"nimbus/core"
 )
 
 func main() {
-	f, _ := os.Create("log/log")
-	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
+	//f, _ := os.Create("log/log")
+	//gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 
-	server := gin.Default()
+	app := app2.NewApp()
+
+	app.Init()
+
+	server := core.GetContext().Server
 
 	server.Static("/assets", "./public/assets")
 	server.LoadHTMLGlob("views/*")
@@ -21,8 +24,5 @@ func main() {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})
 
-	router := route.NewRouter(server)
-	router.Routes()
-
-	server.Run("127.0.0.1:8080")
+	app.Run()
 }

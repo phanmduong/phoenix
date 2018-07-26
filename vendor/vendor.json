@@ -63,6 +63,18 @@
 			"revisionTime": "2018-07-15T08:23:32Z"
 		},
 		{
+			"checksumSHA1": "Q5TUogWYWt1JtuJnfFLgFNvPrHs=",
+			"path": "github.com/jinzhu/gorm",
+			"revision": "0fd395ab37aefd2d50854f0556a4311dccc6f45a",
+			"revisionTime": "2018-06-25T05:07:53Z"
+		},
+		{
+			"checksumSHA1": "4eelJOSLZoDzLuaJvgilOBVNovU=",
+			"path": "github.com/jinzhu/inflection",
+			"revision": "04140366298a54a039076d798123ffa108fff46c",
+			"revisionTime": "2018-03-08T03:36:59Z"
+		},
+		{
 			"checksumSHA1": "w5RcOnfv5YDr3j2bd1YydkPiZx4=",
 			"path": "github.com/mattn/go-isatty",
 			"revision": "6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c",
@@ -105,5 +117,5 @@
 			"revisionTime": "2018-03-28T19:50:20Z"
 		}
 	],
-	"rootPath": "phoenix"
+	"rootPath": "nimbus"
 }
