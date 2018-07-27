@@ -5,17 +5,20 @@ import (
 	userRouter "nimbus/router"
 	"nimbus/core/router"
 	"nimbus/core"
+	"nimbus/core/database"
 )
 
 type App struct {
 	context *core.Context
 	Router  router.Router
+	DB *database.DatabaseFacade
 }
 
 func NewApp() *App {
 	app := &App{
 		context: core.GetContext(),
 		Router:  router.Router{},
+		DB: database.NewDatabase(),
 	}
 	return app
 }
