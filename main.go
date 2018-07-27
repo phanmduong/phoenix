@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"nimbus/core"
+	"fmt"
 )
 
 func main() {
@@ -23,6 +24,10 @@ func main() {
 	server.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})
+
+	config := core.GetContext().AppConfig.Config
+
+	fmt.Println(config["APP_DEBUG"])
 
 	app.Run()
 }
