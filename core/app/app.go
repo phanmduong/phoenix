@@ -5,17 +5,20 @@ import (
 	userRouter "nimbus/router"
 	"nimbus/core/router"
 	"nimbus/core"
+	"nimbus/core/config"
 )
 
 type App struct {
-	context *core.Context
-	Router  router.Router
+	context   *core.Context
+	Router    router.Router
+	AppConfig config.AppConfig
 }
 
 func NewApp() *App {
 	app := &App{
-		context: core.GetContext(),
-		Router:  router.Router{},
+		context:   core.GetContext(),
+		Router:    router.Router{},
+		AppConfig: config.GetAppConfig(),
 	}
 	return app
 }

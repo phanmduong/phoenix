@@ -5,8 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"nimbus/core"
-	"fmt"
-)
+		)
 
 func main() {
 	//f, _ := os.Create("log/log")
@@ -25,9 +24,15 @@ func main() {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})
 
-	config := core.GetContext().AppConfig.Config
+	//tokenString, error := jwt.CreateJWT("dấdsadasdaddas")
+	//
+	//fmt.Println(tokenString)
+	//fmt.Println(error)
 
-	fmt.Println(config["APP_DEBUG"])
+	//tokenString := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiZOG6pWRzYWRhc2RhZGRhcyJ9.oQ8tsS89AthRJToV_xw0_9RUW8wDeDq9jVZrm4U_jAM"
+	//data, error := jwt.ParseJWT(tokenString)
+	//fmt.Println(data)
+	//fmt.Println(error)
 
 	app.Run()
 }
