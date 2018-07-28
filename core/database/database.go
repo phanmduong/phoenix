@@ -18,7 +18,7 @@ func  NewDatabase() * DatabaseFacade{
 	user := "root"
 	database := "test"
 	host := "localhost"
-	port := "33061"
+	port := "33060"
 	password := "secret"
 	db, err := mysql(user, password, database, host, port)
 	if err != nil {
@@ -31,7 +31,7 @@ func  NewDatabase() * DatabaseFacade{
 }
 
 func mysql(user string, password string, databaseName string, host string, port string) (*gorm.DB, error){
-	connectionString := fmt.Sprint("%s:%s@%s:%s/%s?charset=utf8&parseTime=True&loc=Local", user, password, host,port,databaseName)
+	connectionString := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", user, password, host,port,databaseName)
 	db, err := gorm.Open("mysql", connectionString)
 	// remember to close the db
 	return db, err
