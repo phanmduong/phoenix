@@ -5,19 +5,22 @@ import (
 	userRouter "nimbus/router"
 	"nimbus/core/router"
 	"nimbus/core"
+	"nimbus/core/config"
 	"nimbus/core/database"
 )
 
 type App struct {
-	context *core.Context
-	Router  router.Router
 	DB *database.DatabaseFacade
+	context   *core.Context
+	Router    router.Router
+	AppConfig config.AppConfig
 }
 
 func NewApp() *App {
 	app := &App{
-		context: core.GetContext(),
-		Router:  router.Router{},
+		context:   core.GetContext(),
+		Router:    router.Router{},
+		AppConfig: config.GetAppConfig(),
 		DB: database.NewDatabase(),
 	}
 	return app
