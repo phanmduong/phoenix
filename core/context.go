@@ -4,7 +4,7 @@ import (
 	"sync"
 	"github.com/gin-gonic/gin"
 	"nimbus/core/registry"
-)
+	)
 
 type Context struct {
 	Server          *gin.Engine
