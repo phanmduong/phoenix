@@ -4,11 +4,13 @@ import (
 	"sync"
 	"github.com/gin-gonic/gin"
 	"nimbus/core/registry"
-	)
+	"nimbus/core/config"
+)
 
 type Context struct {
 	Server          *gin.Engine
 	RegistryManager *registry.RegistryManager
+	AppConfig config.AppConfig
 }
 
 var instance *Context
@@ -25,6 +27,8 @@ func NewContext() *Context {
 	context := &Context{
 		Server:          gin.Default(),
 		RegistryManager: registry.NewRegistryManager(),
+		AppConfig: config.GetAppConfig(),
+
 	}
 	return context
 }

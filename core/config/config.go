@@ -30,6 +30,11 @@ func NewConfig() AppConfig {
 
 	return AppConfig{
 		Config: map[string]string{
+			"DB_NAME" : os.Getenv("DB_NAME"),
+			"DB_HOST" : os.Getenv("DB_HOST"),
+			"DB_USER": os.Getenv("DB_USER"),
+			"DB_PASSWORD": os.Getenv("DB_PASSWORD"),
+			"DB_PORT": os.Getenv("DB_PORT"),
 			"APP_DEBUG": os.Getenv("APP_DEBUG"),
 			"SECRET_JWT": os.Getenv("SECRET_JWT"),
 		},
