@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"nimbus/core"
+	"nimbus/core/config"
 )
 
 // import _ "github.com/jinzhu/gorm/dialects/postgres"
@@ -18,13 +19,12 @@ type DatabaseFacade struct {
 }
 
 func NewDatabase() *DatabaseFacade {
-	context := core.GetContext()
-	config := context.AppConfig.Config
-	user := config["DB_USER"]
-	database := config["DB_NAME"]
-	host := config["DB_HOST"]
-	port := config["DB_PORT"]
-	password := config["DB_PASSWORD"]
+	appConfig := config.GetAppConfig().Config
+	user := appConfig["DB_USER"]
+	database := appConfig["DB_NAME"]
+	host := appConfig["DB_HOST"]
+	port := appConfig["DB_PORT"]
+	password := appConfig["DB_PASSWORD"]
 	db, err := mysql(user, password, database, host, port)
 	if err != nil {
 		log.Fatal(err)
